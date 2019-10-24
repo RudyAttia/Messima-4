@@ -1,0 +1,8 @@
+<br>
+
+<div *ngFor="let b of myTasks">
+    <h2>{{b.text_task}}</h2>
+    <h4>by {{b.name}}</h4>
+    <h4>{{b.date_task.split('T')[0]}} to {{b.date_task.split('T')[1].substr(0, 5)}}</h4>
+    <button id="{{b.id_task}}" (click)="deleteTask($event)" >delete task</button>
+</div>

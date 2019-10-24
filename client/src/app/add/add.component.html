@@ -1,0 +1,9 @@
+<form [formGroup]="newTask" (ngSubmit)="addTask()">
+    <input type="text" placeholder="enter task" formControlName="texttask">
+    <select formControlName="author">
+        <option value="" disabled selected>Select familly member</option>
+        <option *ngFor="let b of familly">{{b.name}}</option>
+    </select>
+
+    <input type="submit" value="add Task" [disabled]="!newTask.valid">
+</form>
